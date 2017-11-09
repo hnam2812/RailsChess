@@ -6,16 +6,15 @@ git_source(:github) do |repo_name|
 end
 
 gem "rails", "~> 5.0.2"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3"
-# Use Puma as the app server
+gem "mysql2"
 gem "puma", "~> 3.0"
-# Use SCSS for stylesheets
-gem "sass-rails", "~> 5.0"
+gem "sass-rails"
+gem "bootstrap-sass"
 gem "jquery-rails"
 gem "redis", "~> 3.0"
+gem "devise"
+gem "carrierwave"
 
-# Use Capistrano for deployment
 # gem "capistrano-rails", group: :development
 
 group :development, :test do

@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container">
+      <% flash.each do |type, message| %>
+        <% if message %>
+          <div class="alert fade in flash-notice">
+            <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+            <p class="text-center flash-message"><%= message %></p>
+          </div>
+        <% end %>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

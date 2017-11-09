@@ -1,0 +1,21 @@
+<%= form_for(:user, url: session_path(:user)) do |f| %>
+  <div class="row login_row">
+    <div class="col-md-4 col-md-offset-2">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, class: "form-control login_input" %>
+    </div>
+
+    <div class="col-md-4">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control login_input" %>
+    </div>
+    <div class="col-md-2">
+      <%= f.submit "Log in", class: "btn btn-primary form-control login_input" %>
+    </div>
+  </div>
+  <div class="row forgot-pass">
+    <div class="col-md-5 col-md-offset-2">
+      <%= link_to "Forgot your password?", new_password_path(:user) %>
+    </div>
+  </div>
+<% end %>
