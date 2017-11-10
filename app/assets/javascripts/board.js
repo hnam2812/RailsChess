@@ -1,14 +1,16 @@
 $(function() {
-  var cfg;
-  App.chess = new Chess();
-  cfg = {
-    draggable: true,
-    pieceTheme: "assets/chesspieces/alpha/{piece}.png",
-    showNotation: false,
-    onDragStart: onDragStart,
-    onDrop: onDrop
-  };
-  return App.board = ChessBoard("chessboard", cfg);
+  if($("#game-play").length > 0) {
+    var cfg;
+    App.chess = new Chess();
+    cfg = {
+      draggable: true,
+      pieceTheme: "assets/chesspieces/alpha/{piece}.png",
+      showNotation: false,
+      onDragStart: onDragStart,
+      onDrop: onDrop
+    };
+    return App.board = ChessBoard("chessboard", cfg);
+  }
 });
 
 function onDragStart(source, piece, position, orientation) {
