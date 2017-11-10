@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require lib/chessboard.min
-//= require_tree .
+//= require board
+//= require cable

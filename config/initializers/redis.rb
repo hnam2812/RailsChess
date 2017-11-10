@@ -1,1 +1,1 @@
-REDIS = Redis.new(host: "localhost", db: 1)
+REDIS = Redis.new(host: "localhost", db: 2)

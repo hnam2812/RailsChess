@@ -1,4 +1,7 @@
+<% content_for :channels do %>
+  <%= javascript_include_tag "channels/game" %>
+<% end %>
 <div id="game-play">
-  <div id="chessboard" style="width: 400px"></div>
-  <div id="messages"></div>
+  <div id="chessboard" style="width: 600px"></div>
+  <div id="game-status"></div>
 </div>
