@@ -1,11 +1,12 @@
 class GameChannel < ApplicationCable::Channel
   def subscribed
     stream_from "player_#{current_user.id}"
+    Seek.create current_user.id.to_s
   end
 
   def unsubscribed
-    Seek.remove current_user.id
     Game.forfeit current_user.id
+    Seek.remove current_user.id
   end
 
   def make_move data
