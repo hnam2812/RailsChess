@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109043148) do
+ActiveRecord::Schema.define(version: 20171113072451) do
+
+  create_table "chess_boards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "owner_board_id"
+    t.integer  "opponent_id"
+    t.string   "fen"
+    t.string   "moves_arr"
+    t.string   "owner_board_color"
+    t.integer  "board_status"
+    t.integer  "winner_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false

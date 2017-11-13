@@ -14,7 +14,7 @@ gem "jquery-rails"
 gem "redis", "~> 3.0"
 gem "devise"
 gem "carrierwave"
-
+gem "chess", git: "http://github.com/edpaget/chess-rules.git"
 # gem "capistrano-rails", group: :development
 
 group :development, :test do

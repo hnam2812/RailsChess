@@ -71,8 +71,12 @@ $(function() {
       var status = gameStatus();
       printMessage(status[0], status[2])
       App.game.perform("make_move", {move: move, status: [status[1], status[2]].join("-")});
-      if (App.chess.game_over()){
-        App.game.perform("game_over");
+      if (App.chess.in_checkmate()){
+        App.game.perform("game_over", {status: [status[1], status[2]].join("-"), type: "checkmate"});
+      }
+
+      if (App.chess.in_draw()){
+        App.game.perform("game_over", {status: [status[1], status[2]].join("-"), type: "draw"});
       }
     }
   };
