@@ -19,11 +19,9 @@ App.game = App.cable.subscriptions.create("GameChannel", {
         this.printMessage(data.msg, data.type);
         return App.board.position(App.chess.fen());
       case "opponent_forfeits":
-        this.unsubscribe();
         return this.printMessage(data.msg, data.type);
       case "game_over":
-        this.printMessage(data.msg, data.type);
-        return this.unsubscribe();
+        return this.printMessage(data.msg, data.type);
     }
   },
   printMessage: function(message, type) {

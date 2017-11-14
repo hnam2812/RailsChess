@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/edpaget/chess-rules.git
+  revision: 69e449b824cab20bfd04b34a12d8f58c641cf06b
+  specs:
+    chess (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -164,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   carrierwave
+  chess!
   devise
   jquery-rails
   listen (~> 3.0.5)
